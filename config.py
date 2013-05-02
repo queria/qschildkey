@@ -1,3 +1,5 @@
+# -*- coding: utf-8
+
 import pygame as pg
 import symbol
 
@@ -19,24 +21,44 @@ symbols[pg.K_0] = symbol.Number(0)
 
 images = {
     'a': (('auto', 'car'),),
-    'r': (('redkvicka', 'radish'),
-          ('rohlik', 'kifli'),),
-    'm': (('mys', 'mouse'),),
+    'b': (('balon', 'ball'),),
+    # c
+    ## cesta, cihla, cirkus, citron, čáp
     'd': (('dum', 'house'),),
-    'k': (('kocka', 'cat'),
+    # e
+    # f
+    # fazole?
+    # g
+    ## gramofon?
+    'h': (('hodiny', 'clocks'),),
+    # i
+    'j': (('jablko', 'apple'),),
+    'k': (('kočka', 'cat'),
           ('kolo', 'bicycle'),),
-    'p': (('piti', 'drink'),
-          ('pes', 'dog'),
-          ('pan', 'man'),),
     'l': (('lokomotiva', 'train_engine'),
           ('lopata', 'shovel'),),
-    'h': (('hodiny', 'clocks'),),
+    'm': (('myš', 'mouse'),),
+    # n
+    ## nos
+    # o
+    ## opice
+    'p': (('pití', 'drink'),
+          ('pes', 'dog'),
+          ('pán', 'man'),),
+    # q
+    'r': (('ředkvička', 'radish'),
+          ('rohlík', 'kifli'),),
+    's': (('sýr', 'cheese'),),
+    't': (('talíř', 'dish'),),
+    # u
+    ## uterka
     'v': (('vlak', 'train'),),
-    'j': (('jablko', 'apple'),),
-    'b': (('balon', 'ball'),),
-    's': (('syr', 'cheese'),),
-    't': (('talir', 'dish'),),
-    'z': (('zajic', 'hare'),),
+    # w
+    # x
+    ## xylofon
+    # y
+    'z': (('zajíc', 'hare'),),
+    ## zámek
 }
 
 for key in images:
