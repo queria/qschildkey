@@ -25,6 +25,14 @@ def is_for_quit(event):
     )
 
 
+def calc_center(sfc, full_w, full_h):
+    shift_w = (full_w - sfc.get_width()) / 2
+    shift_h = (full_h - sfc.get_height()) / 2
+
+    return (max(0, shift_w),
+            max(0, shift_h))
+
+
 def main():
     scr = pg.display.set_mode((800, 600))
     modes = pg.display.list_modes()
@@ -34,6 +42,8 @@ def main():
     running = True
     last_symbol = None
     use_invalid = '--invalid' in sys.argv
+    scr_w = scr.get_width()
+    scr_h = scr.get_height()
 
     while running:
         for event in pg.event.get():
@@ -43,7 +53,8 @@ def main():
 
         scr.fill(color.DARKGRAY)
         if last_symbol is not None:
-            scr.blit(last_symbol, (0, 0))
+            scr.blit(last_symbol,
+                     calc_center(last_symbol, scr_w, scr_h))
         pg.display.flip()
         clock.tick(50)
 
